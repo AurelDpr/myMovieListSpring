@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>myMovieListSpring</name>
 	<description>BackEnd for MyMovieList</description>
+	<packaging>war</packaging>
 
 	<properties>
 		<java.version>1.8</java.version>
