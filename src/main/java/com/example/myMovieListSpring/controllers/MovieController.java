@@ -34,9 +34,10 @@ public class MovieController {
 
     @CrossOrigin
     @DeleteMapping(path="/delete")
-    public @ResponseBody String deleteMovie (@RequestParam Long movieId) {
+    public @ResponseBody Movies deleteMovie (@RequestParam Long movieId) {
+        Movies movieFromDb = movieRepository.findById(movieId).get();
         movieRepository.deleteById(movieId);
-        return "suppression";
+        return movieFromDb;
     }
 
     @CrossOrigin

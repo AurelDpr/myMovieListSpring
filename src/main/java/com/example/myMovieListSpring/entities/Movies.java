@@ -9,6 +9,7 @@ public class Movies {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
     private Long userId;
+    private Long movieId;
     private String title;
     private String posterPath;
 
@@ -16,6 +17,7 @@ public class Movies {
     }
 
     public Movies(Movies movie) {
+        this.movieId = movie.movieId;
         this.userId = movie.userId;
         this.title = movie.title;
         this.posterPath = movie.posterPath;
@@ -35,6 +37,14 @@ public class Movies {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public Long getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(Long movieId) {
+        this.movieId = movieId;
     }
 
     public String getTitle() {
