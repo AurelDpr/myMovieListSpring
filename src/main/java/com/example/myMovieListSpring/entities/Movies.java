@@ -11,6 +11,7 @@ public class Movies {
     private Long userId;
     private Long movieId;
     private String title;
+    private String type;
     private String posterPath;
 
     public Movies() {
@@ -21,6 +22,7 @@ public class Movies {
         this.userId = movie.userId;
         this.title = movie.title;
         this.posterPath = movie.posterPath;
+        this.type = movie.type;
     }
 
     public Long getId() {
@@ -61,5 +63,13 @@ public class Movies {
 
     public void setPosterPath(String posterPath) {
         this.posterPath = posterPath;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
